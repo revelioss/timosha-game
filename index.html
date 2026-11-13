@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#1b2a41">
+<title>Тимоша ищет друзей</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="cv" width="400" height="225"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="hearts"></div>
+    <div id="acornbox"><img id="acornIcon" alt=""><span id="acornN">0</span></div>
+    <div id="lvlname"></div>
+  </div>
+  <button id="btnPause" class="hidden" aria-label="Пауза"><i></i><i></i></button>
+  <div id="bossbar" class="hidden"><span>Ворчун-Туча</span><div id="pips"></div></div>
+  <div id="hint" class="hidden"></div>
+
+  <div id="dlg" class="hidden">
+    <canvas id="portrait" width="48" height="48"></canvas>
+    <div class="dbox">
+      <div id="dname"></div>
+      <div id="dtext"></div>
+      <div id="dword"></div>
+    </div>
+    <div id="dnext">&#9660;</div>
+  </div>
+
+  <div id="sIntro" class="screen hidden"><div class="card"><div id="introNum"></div><div id="introName"></div><div id="introEn"></div></div></div>
+
+  <div id="sTitle" class="screen hidden">
+    <div class="logo">
+      <div class="l1">Тимоша</div>
+      <div class="l2">ищет друзей</div>
+      <div class="l3">Timosha Looks for Friends</div>
+    </div>
+    <div class="menu">
+      <button class="btn big" id="bPlay">Играть</button>
+      <button class="btn" id="bLevels">Уровни</button>
+      <button class="btn small" id="bSound">Звук: вкл</button>
+    </div>
+    <div class="credit">По мотивам книги Алмаса Искакова</div>
+  </div>
+
+  <div id="sSelect" class="screen hidden">
+    <h2>Выбери уровень</h2>
+    <div id="cards"></div>
+    <button class="btn small back" id="bSelBack">Назад</button>
+  </div>
+
+  <div id="sPause" class="screen hidden">
+    <div class="panel">
+      <h2>Пауза</h2>
+      <button class="btn big" id="bResume">Продолжить</button>
+      <button class="btn" id="bRestart">Сначала</button>
+      <button class="btn" id="bPMenu">В меню</button>
+      <button class="btn small" id="bPSound">Звук: вкл</button>
+    </div>
+  </div>
+
+  <div id="sComplete" class="screen hidden">
+    <div class="panel">
+      <h2>Уровень пройден!</h2>
+      <div id="cSummary"></div>
+      <div id="cFriend"></div>
+      <button class="btn big" id="bNext">Дальше</button>
+      <button class="btn" id="bRepeat">Ещё раз</button>
+      <button class="btn small" id="bCMenu">Уровни</button>
+    </div>
+  </div>
+
+  <div id="sOver" class="screen hidden">
+    <div class="panel">
+      <h2>Ой, не получилось!</h2>
+      <div class="sub">Не расстраивайся — друзья в тебя верят. Попробуем ещё раз?</div>
+      <button class="btn big" id="bRetry">Ещё раз</button>
+      <button class="btn" id="bOMenu">В меню</button>
+    </div>
+  </div>
+
+  <div id="sEnd" class="screen hidden">
+    <div class="panel wide">
+      <h2>Конец. Разные друзья — самые лучшие!</h2>
+      <div class="sub">Вы нашли друзей и подружились даже с тучкой!</div>
+      <div id="endWords"></div>
+      <div class="sub small">The End · Thank you for playing!</div>
+      <button class="btn big" id="bAgain">Играть снова</button>
+      <button class="btn small" id="bEMenu">В меню</button>
+    </div>
+  </div>
+</div>
+
+<div id="controls" class="hidden">
+  <div id="padL"><button id="bL" aria-label="Влево"><i class="ar l"></i></button><button id="bR" aria-label="Вправо"><i class="ar r"></i></button></div>
+  <button id="bJ" aria-label="Прыжок"><i class="ar u"></i></button>
+</div>
+
+<script src="js/sprites.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
